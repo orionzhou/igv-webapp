@@ -1,7 +1,7 @@
 [
   {
-    "id": "Zmays_B73v4",
-    "name": "maize (B73 AGPv4)",
+    "id": "B73v4",
+    "name": "Zmays B73v4",
     "fastaURL": "https://s3.msi.umn.edu/zhoup-igv/Zmays-B73/10.fasta",
     "indexURL": "https://s3.msi.umn.edu/zhoup-igv/Zmays-B73/10.fasta.fai",
     "tracks": [
