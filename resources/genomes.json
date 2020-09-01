@@ -2,14 +2,14 @@
   {
     "id": "Zmays_B73v4",
     "name": "maize (B73 AGPv4)",
-    "fastaURL": "https://s3.msi.umn.edu/zhoup-igv/Zmays_B73/10.fasta",
-    "indexURL": "https://s3.msi.umn.edu/zhoup-igv/Zmays_B73/10.fasta.fai",
+    "fastaURL": "https://s3.msi.umn.edu/zhoup-igv/Zmays-B73/10.fasta",
+    "indexURL": "https://s3.msi.umn.edu/zhoup-igv/Zmays-B73/10.fasta.fai",
     "tracks": [
       {
         "name": "Genes",
         "format": "bed",
-        "url": "https://s3.msi.umn.edu/zhoup-igv/Zmays_B73/10.bed.gz",
-        "indexURL": "//s3.msi.umn.edu/zhoup-igv/Zmays_B73/10.bed.gz.tbi",
+        "url": "https://s3.msi.umn.edu/zhoup-igv/Zmays-B73/10.bed.gz",
+        "indexURL": "//s3.msi.umn.edu/zhoup-igv/Zmays-B73/10.bed.gz.tbi",
         "displayMode": "SQUISHED",
         "visibilityWindow": -1,
         "removable": false,
