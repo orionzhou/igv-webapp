@@ -10,18 +10,23 @@
       height: 35,
     },
     {
-      type: "wig",
-      name: "Root B73 2015 rep1 -",
-      url: "https://s3.msi.umn.edu/zhoup-igv/Zmays-B73/cage/s01.minus.bw",
-      color: "green",
-      height: 35,
-    },
-    {
-      type: "wig",
-      name: "Root B73 2015 rep2 +",
-      url": "https://s3.msi.umn.edu/zhoup-igv/Zmays-B73/cage/s02.plus.bw",
-      color: "red",
-      height: 35,
+      type: "merged",
+      name: "Root B73 2015 rep1",
+      height: 50,
+      tracks: [
+        {
+          type: "wig",
+          name: "Root B73 2015 rep2",
+          url": "https://s3.msi.umn.edu/zhoup-igv/Zmays-B73/cage/s02.plus.bw",
+          color: "green",
+        },
+        {
+          type: "wig",
+          name: "Root B73 2015 rep2",
+          url: "https://s3.msi.umn.edu/zhoup-igv/Zmays-B73/cage/s01.minus.bw",
+          color: "red",
+        },
+      ],
     },
     {
       type: "wig",
@@ -57,6 +62,6 @@
       url: "https://s3.msi.umn.edu/zhoup-igv/Zmays-B73/cage/s09.minus.bw",
       color: "green",
       height: 35,
-    }
+    },
   ]
 }
