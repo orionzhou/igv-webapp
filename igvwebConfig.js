@@ -5,7 +5,7 @@ var igvwebConfig = {
         {
             queryParametersSupported: true,
             showChromosomeWidget: true,
-            genome: "hg19",
+            genome: "B73v4",
             showSVGButton: false,
             tracks: [
                 // TODO -- add default tracks here.  See github.com/igvteam/igv.js/wiki for details
