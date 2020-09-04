@@ -7,6 +7,6 @@
     "resources/tracks/hg19_tutorials.json"
   ],
   "B73v4": [
-    "resources/tracks/B73v4_cage.json"
+    "https://s3.msi.umn.edu/zhoup-igv/Zmays-B73/cage.json"
   ]
 }
