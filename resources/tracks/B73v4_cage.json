@@ -3,18 +3,40 @@
   "description": "CAGE-Seq Experiments",
   "tracks": [
     {
+      "type": "merged",
+      "name": "Root B73 2015 rep1",
+      "height": 50,
       "type": "wig",
-      "name": "Root B73 2015 rep1 +",
-      "url": "https://s3.msi.umn.edu/zhoup-igv/Zmays-B73/cage/s01.plus.bw",
-      "color": "red",
-      "height": 35
+      "tracks": [
+        {
+          "type": "wig",
+          "url": "https://s3.msi.umn.edu/zhoup-igv/Zmays-B73/cage/s01.minus.bw",
+          "color": "green",
+        },
+        {
+          "type": "wig",
+          "url": "https://s3.msi.umn.edu/zhoup-igv/Zmays-B73/cage/s01.plus.bw",
+          "color": "red",
+        }
+      ]
     },
     {
+      "type": "merged",
+      "name": "Root B73 2015 rep2",
+      "height": 50,
       "type": "wig",
-      "name": "Root B73 2015 rep1 -",
-      "url": "https://s3.msi.umn.edu/zhoup-igv/Zmays-B73/cage/s01.minus.bw",
-      "color": "green",
-      "height": 35
+      "tracks": [
+        {
+          "type": "wig",
+          "url": "https://s3.msi.umn.edu/zhoup-igv/Zmays-B73/cage/s02.minus.bw",
+          "color": "green",
+        },
+        {
+          "type": "wig",
+          "url": "https://s3.msi.umn.edu/zhoup-igv/Zmays-B73/cage/s02.plus.bw",
+          "color": "red",
+        }
+      ]
     }
   ]
 }
