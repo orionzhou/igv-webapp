@@ -57,6 +57,6 @@
       url: "https://s3.msi.umn.edu/zhoup-igv/Zmays-B73/cage/s09.minus.bw",
       color: "green",
       height: 35
-    },
+    }
   ]
 }
