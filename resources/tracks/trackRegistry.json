@@ -5,5 +5,8 @@
     "resources/tracks/hg19_encode.json",
     "resources/tracks/hg19_platinum_genomes.json",
     "resources/tracks/hg19_tutorials.json"
+  ],
+  "Zmays_B73": [
+    "resources/tracks/Zmays_B73_cage.json"
   ]
 }

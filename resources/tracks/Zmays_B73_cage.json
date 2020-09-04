@@ -1,0 +1,30 @@
+{
+  "label": "CAGE-Seq",
+  "description": "CAGE-Seq Experiments",
+  "tracks": [
+    {
+      "type": "wig",
+      "name": "Root B73 2015 rep1 +",
+      "url": "hhttps://s3.msi.umn.edu/zhoup-igv/Zmays-B73/cage/s01.plus.bw",
+      "color": "red"
+    },
+    {
+      "type": "wig",
+      "name": "Root B73 2015 rep1 -",
+      "url": "https://s3.msi.umn.edu/zhoup-igv/Zmays-B73/cage/s01.minus.bw",
+      "color": "green"
+    },
+    {
+      "type": "wig",
+      "name": "Root B73 2015 rep2 +",
+      "url": "hhttps://s3.msi.umn.edu/zhoup-igv/Zmays-B73/cage/s02.plus.bw",
+      "color": "red"
+    },
+    {
+      "type": "wig",
+      "name": "Root B73 2015 rep2 -",
+      "url": "https://s3.msi.umn.edu/zhoup-igv/Zmays-B73/cage/s02.minus.bw",
+      "color": "green"
+    },
+  ]
+}

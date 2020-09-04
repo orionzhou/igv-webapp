@@ -7,9 +7,9 @@
     "tracks": [
       {
         "name": "Genes",
-        "format": "bed",
-        "url": "https://s3.msi.umn.edu/zhoup-igv/Zmays-B73/10.bed.gz",
-        "indexURL": "//s3.msi.umn.edu/zhoup-igv/Zmays-B73/10.bed.gz.tbi",
+        "format": "gtf",
+        "url": "https://s3.msi.umn.edu/zhoup-igv/Zmays-B73/10.gtf.gz",
+        "indexURL": "//s3.msi.umn.edu/zhoup-igv/Zmays-B73/10.gtf.gz.tbi",
         "displayMode": "SQUISHED",
         "visibilityWindow": -1,
         "removable": false,
