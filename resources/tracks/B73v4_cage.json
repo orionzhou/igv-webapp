@@ -23,7 +23,7 @@
       tracks: [
         {
           type: "wig",
-          url": "https://s3.msi.umn.edu/zhoup-igv/Zmays-B73/cage/s02.plus.bw",
+          url: "https://s3.msi.umn.edu/zhoup-igv/Zmays-B73/cage/s02.plus.bw",
           color: "green",
         },
         {
