@@ -16,22 +16,5 @@
       color: "green",
       height: 35,
     },
-    {
-      type: "merged",
-      name: "Root B73 2015 rep2",
-      height: 50,
-      "tracks": [
-        {
-          type: "wig",
-          url: "https://s3.msi.umn.edu/zhoup-igv/Zmays-B73/cage/s02.plus.bw",
-          color: "green",
-        },
-        {
-          type: "wig",
-          url: "https://s3.msi.umn.edu/zhoup-igv/Zmays-B73/cage/s02.minus.bw",
-          color: "red",
-        },
-      ],
-    },
   ]
 }

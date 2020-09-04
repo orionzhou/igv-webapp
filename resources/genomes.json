@@ -8,8 +8,8 @@
       {
         "name": "Genes",
         "format": "gff3",
-        "url": "https://s3.msi.umn.edu/zhoup-igv/Zmays-B73/10.gtf.gz",
-        "indexURL": "//s3.msi.umn.edu/zhoup-igv/Zmays-B73/10.gtf.gz.tbi",
+        "url": "https://s3.msi.umn.edu/zhoup-igv/Zmays-B73/10.gff.gz",
+        "indexURL": "//s3.msi.umn.edu/zhoup-igv/Zmays-B73/10.gff.gz.tbi",
         "displayMode": "SQUISHED",
         "visibilityWindow": -1,
         "removable": false,
