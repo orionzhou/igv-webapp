@@ -11,12 +11,12 @@
         {
           "type": "wig",
           "url": "https://s3.msi.umn.edu/zhoup-igv/Zmays-B73/cage/s01.minus.bw",
-          "color": "green",
+          "color": "green"
         },
         {
           "type": "wig",
           "url": "https://s3.msi.umn.edu/zhoup-igv/Zmays-B73/cage/s01.plus.bw",
-          "color": "red",
+          "color": "red"
         }
       ]
     },
@@ -29,12 +29,12 @@
         {
           "type": "wig",
           "url": "https://s3.msi.umn.edu/zhoup-igv/Zmays-B73/cage/s02.minus.bw",
-          "color": "green",
+          "color": "green"
         },
         {
           "type": "wig",
           "url": "https://s3.msi.umn.edu/zhoup-igv/Zmays-B73/cage/s02.plus.bw",
-          "color": "red",
+          "color": "red"
         }
       ]
     }
