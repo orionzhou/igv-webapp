@@ -1,11 +1,12 @@
 var igvwebConfig = {
-    genomes: "resources/genomes.json",
-    trackRegistryFile: "resources/tracks/trackRegistry.json",
+    genomes: "https://s3.msi.umn.edu/zhoup-igv/genomes.json",
+    trackRegistryFile: "https://s3.msi.umn.edu/zhoup-igv/trackRegistry.json",
     igvConfig:
         {
+            genomeList: "https://s3.msi.umn.edu/zhoup-igv/genomes.json",
             queryParametersSupported: true,
             showChromosomeWidget: true,
-            genome: "hg19",
+            genome: "B73v4",
             showSVGButton: false,
             tracks: [
                 // TODO -- add default tracks here.  See github.com/igvteam/igv.js/wiki for details
