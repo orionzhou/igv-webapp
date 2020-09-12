@@ -1,9 +1,9 @@
 var igvwebConfig = {
-    genomes: "https://s3.msi.umn.edu/zhoup-igv/genomes.json",
-    trackRegistryFile: "https://s3.msi.umn.edu/zhoup-igv/trackRegistry.json",
+    genomes: "https://s3.msi.umn.edu/zhoup-igv-data/genomes.json",
+    trackRegistryFile: "https://s3.msi.umn.edu/zhoup-igv-data/trackRegistry.json",
     igvConfig:
         {
-            genomeList: "https://s3.msi.umn.edu/zhoup-igv/genomes.json",
+            genomeList: "https://s3.msi.umn.edu/zhoup-igv-data/genomes.json",
             queryParametersSupported: true,
             showChromosomeWidget: true,
             genome: "B73v4",
