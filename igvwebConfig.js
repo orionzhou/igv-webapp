@@ -1,6 +1,6 @@
 var igvwebConfig = {
-    genomes: "resources/genomes.json",
-    trackRegistryFile: "resources/tracks/trackRegistry.json",
+    genomes: "https://s3.msi.umn.edu/zhoup-igv-data/genomes.json",
+    trackRegistryFile: "https://s3.msi.umn.edu/zhoup-igv-data/trackRegistry.json",
 
     // Supply a Google client id to enable the Google file picker in the load menus.  This is optional
     //clientId: "...",
@@ -15,9 +15,10 @@ var igvwebConfig = {
 
     igvConfig:
         {
+            genomeList: "https://s3.msi.umn.edu/zhoup-igv-data/genomes.json",
             queryParametersSupported: true,
             showChromosomeWidget: true,
-            genome: "hg19",
+            genome: "B73v4",
             showSVGButton: false,
             tracks: [
                 // TODO -- add default tracks here.  See github.com/igvteam/igv.js/wiki for details
