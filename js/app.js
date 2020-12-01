@@ -22,21 +22,13 @@
  */
 
 import {GoogleAuth} from '../node_modules/igv-utils/src/index.js';
-import {
-    AlertSingleton,
-    createSessionWidgets,
-    createTrackWidgetsWithTrackRegistry,
-    dropboxButtonImageBase64,
-    dropboxDropdownItem,
-    EventBus,
-    googleDriveButtonImageBase64,
-    googleDriveDropdownItem
-} from '../node_modules/igv-widgets/dist/igv-widgets.js'
+import { AlertSingleton, createSessionWidgets, createTrackWidgetsWithTrackRegistry, dropboxButtonImageBase64, dropboxDropdownItem, EventBus, googleDriveButtonImageBase64, googleDriveDropdownItem } from '../node_modules/igv-widgets/dist/igv-widgets.js'
 import Globals from "./globals.js"
 import {creatGenomeWidgets, genomeWidgetConfigurator, initializeGenomeWidgets} from './genomeWidgets.js';
 import {createShareWidgets, shareWidgetConfigurator} from './shareWidgets.js';
 import {sessionURL} from './shareHelper.js';
 import {createSVGWidget} from './svgWidget.js';
+import GtexUtils from "./gtexUtils.js";
 import version from "./version.js";
 
 $(document).ready(async () => main($('#igv-app-container'), igvwebConfig));
@@ -45,8 +37,8 @@ let googleEnabled = false;
 
 // For development with igv.js (1) comment out the script include of igv.min.js in index.html, (2) uncomment the 2 lines below
 // import igv from '../node_modules/igv/dist/igv.js'
-// import igv from '../node_modules/igv/dist/igv.esm.js'
-// window.igv = igv;
+import igv from '../node_modules/igv/dist/igv.esm.js'
+window.igv = igv;
 
 async function main($container, config) {
 
@@ -55,16 +47,17 @@ async function main($container, config) {
     $('#igv-app-version').text(`IGV-Web app version ${version()}`)
     $('#igv-igvjs-version').text(`igv.js version ${igv.version()}`)
 
-    const enableGoogle = config.clientId &&
-        'CLIENT_ID' !== config.clientId &&
+    const enableGoogle = (config.clientId  || config.apiKey) &&
         (window.location.protocol === "https:" || window.location.host === "localhost");
 
     if (enableGoogle) {
         try {
             await GoogleAuth.init({
                 client_id: config.clientId,
-                scope: 'https://www.googleapis.com/auth/userinfo.profile'
+                apiKey: config.apiKey,
+                scope: 'https://www.googleapis.com/auth/userinfo.profile',
             })
+            await GoogleAuth.signOut();   // The await is important !!!
             googleEnabled = true;
         } catch (e) {
             console.error(e);
@@ -72,7 +65,24 @@ async function main($container, config) {
         }
     }
 
-    const browser = await igv.createBrowser($container.get(0), config.igvConfig);
+    // Load genomes for use by igv.js and webapp
+    if (config.genomes) {
+        let tmp = await getGenomesArray(config.genomes);
+        config.genomes = tmp;
+        config.igvConfig.genomes = tmp;
+    }
+
+    const igvConfig = config.igvConfig;
+
+    if(config.restoreLastGenome) {
+        const lastGenomeId = localStorage.getItem("genomeID");
+        if (lastGenomeId && lastGenomeId !== igvConfig.genome) {
+            igvConfig.genome = lastGenomeId;
+            igvConfig.tracks = [];
+        }
+    }
+
+    const browser = await igv.createBrowser($container.get(0), igvConfig);
 
     if (browser) {
         Globals.browser = browser;
@@ -110,8 +120,7 @@ async function initializationHelper(browser, $container, options) {
         ['igv-app-encode-signal-modal', 'igv-app-encode-others-modal'],
         'igv-app-track-from-url-modal',
         'igv-app-track-select-modal',
-        igv.xhr,
-        igv.GtexUtils,
+        GtexUtils,
         options.trackRegistryFile,
         async configurations => await browser.loadTrackList(configurations));
 
@@ -169,7 +178,25 @@ function createAppBookmarkHandler($bookmark_button) {
             alert(blurb);
         }
     })
+}
 
+async function getGenomesArray(genomes) {
+
+    if (undefined === genomes) {
+        return undefined;
+    }
+    if (Array.isArray(genomes)) {
+        return genomes;
+    } else {
+
+        let response = undefined;
+        try {
+            response = await fetch(genomes);
+            return response.json();
+        } catch (e) {
+            AlertSingleton.present(e.message);
+        }
+    }
 }
 
 export {main}
